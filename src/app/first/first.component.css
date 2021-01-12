@@ -1,0 +1,22 @@
+img{
+   width: 40px;
+   height:40px;
+   margin-left: 20px;
+   margin-top: 20px
+}
+.col-9{
+    padding-left: 0px;
+    margin-left:0px ;
+}
+.container{
+    margin-left: 0px;
+    padding-left: 0px;
+}
+.card{
+    border: 2px solid black;
+    width: 220px;
+    height:150px;
+}
+.row{
+    margin-top: 15px;
+}
