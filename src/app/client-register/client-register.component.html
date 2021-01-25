@@ -1,0 +1,84 @@
+
+<div class="card bg-dark text-white">
+    <img
+      src="https://mdbootstrap.com/img/new/slides/017.jpg" height="750px"
+      class="card-img"
+      alt="..."
+    />
+    <div class="card-img-overlay">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7" style="background-color: white;margin-left: 200px;margin-top: 40px;width:80%;">
+                    <h4 style="margin-left: 200px;color:black;">Client Registration</h4>
+                    
+        
+                    <form #userPost="ngForm" (ngSubmit)="onsubmit(userPost.value)">
+                        <div class="form-group">
+                            
+                            <label for="name">Company Name</label>
+                            <input type="text" class="form-control" name="companyname" ngModel placeholder="Enter company name">
+        
+                       
+                            
+                            <label for="type">Industry Type</label>
+                            <input type="text" class="form-control" name="itype" ngModel placeholder="Enter type of industry">
+        
+                       
+                            
+                            <label for="personname">Contact Person Name</label>
+                            <input type="text" class="form-control" name="personnames" ngModel placeholder="Enter person name">
+        
+                       
+                            <label for="contact number">Contact Number</label>
+                            <input type="number" class="form-control" name="contactnumbers" ngModel
+                                placeholder="Enter Phone Number">
+        
+                       
+                            <label for="Emailid">Email Id</label>
+                            <input type="email" class="form-control" name="emailids" ngModel placeholder="Enter official mail">
+        
+                       
+                            <label for="password">password</label>
+                            <input type="password" class="form-control" name="passwords" ngModel placeholder="Enter password">
+        
+                        
+                            <label for="Confirm password">Confirm Password</label>
+                            <input type="password" class="form-control" name="cpasswords" ngModel
+                                placeholder="Re-enter the password">
+        
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 30%;margin-left: 200px;margin-bottom: 5px;">Submit</button>
+                       <br>
+                    </form>
+                </div>
+        
+            </div>
+        </div>
+     
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
