@@ -1,0 +1,70 @@
+<mat-sidenav-container class="sidenav-container" >
+    <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+      <mat-toolbar>
+        <h1>Settings</h1>
+      </mat-toolbar>
+      <mat-nav-list>
+        <a mat-list-item routerLink="/profile" routerLinkActive="active">Profile</a>
+        <a mat-list-item routerLink="/subscription" routerLinkActive="active">Subscription</a>
+        <a mat-list-item routerLink="/faq" routerLinkActive="active">FAQ & Contact US</a>
+        <a mat-list-item routerLink="/terms" routerLinkActive="active">Terms And Condition</a>
+        <a mat-list-item routerLink="/licence" routerLinkActive="active">User license</a>
+        <a mat-list-item routerLink="/privacy" routerLinkActive="active">Privacy Policy</a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <div class="container" style="  margin: 20px;
+      padding: 20px;">
+        <h1>Edit Profile</h1>
+        <br>
+        Yours profile is how others see you accross this site. It is up to you how much or how little information you choose
+        to provide.
+        <br><br>
+    
+        <div class="row">
+            <div class="col-8">About the company
+                <div class="form-floating">
+                    <textarea class="form-control" [(ngModel)]="data" placeholder="enter" id="floatingTextarea2"
+                        style="height: 200px"></textarea>
+    
+                    <br><br>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                Domain Name
+                                <input type="text" [(ngModel)]="name" class="form-control" placeholder="enter"><br><br><br>
+                                Website
+                                <input type="text" [(ngModel)]="website" class="form-control" placeholder="enter">
+                            </div>
+                            <div class="col">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+            <div class="col-4">
+                <div class="mb-3">
+                    <br>
+                    <img [src]="url" height="200"> <br />
+                    <br>
+                    <input type='file' [(ngModel)]="img" (change)="onSelectFile($event)">
+                </div>
+            </div>
+        </div>
+        <div>
+            <button type="button" class="btn btn-primary" style="margin-right: 50px; float: right;" (onClick)="save()">Save
+                Changes</button>
+    
+        </div>
+    
+    
+    </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+

@@ -1,0 +1,107 @@
+<mat-sidenav-container class="sidenav-container" >
+    <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+      <mat-toolbar>
+        <h1>Settings</h1>
+      </mat-toolbar>
+      <mat-nav-list>
+        <a mat-list-item routerLink="/profile" routerLinkActive="active">Profile</a>
+        <a mat-list-item routerLink="/subscription" routerLinkActive="active">Subscription</a>
+        <a mat-list-item routerLink="/faq" routerLinkActive="active">FAQ & Contact US</a>
+        <a mat-list-item routerLink="/terms" routerLinkActive="active">Terms And Condition</a>
+        <a mat-list-item routerLink="/licence" routerLinkActive="active">User license</a>
+        <a mat-list-item routerLink="/privacy" routerLinkActive="active">Privacy Policy</a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content style="margin-top:0px;">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <div class="container" style="
+      text-align: center;">
+        <h1 style="margin-right:250px;">Choose Your Plan</h1>
+        <br>
+        <h3 style="margin-right: 250px;">Downgrade or upgrade at any time</h3>
+        <br><br><br>
+        <div style="margin-left: 00px;">
+            <table class="table table-striped" style="width: 900px;height: 500px;">
+                <thead>
+                    <tr>
+                        <th scope="col">Features</th>
+                        <th scope="col">Basic</th>
+                        <th scope="col">Standard</th>
+                        <th scope="col">Premium</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>
+                            <h4>Yes</h4>
+                        </td>
+                        <td><img style="height: 30px;width: 35px;" src="../assets/delete.png"></td>
+                        <td><img style="height: 30px;width: 35px;" src="../assets/delete.png"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td><img style="height: 30px;width: 35px;" src="../assets/delete.png"></td>
+                        <td>
+                            <h4>Yes</h4>
+                        </td>
+                        <td><img style="height: 30px;width: 35px;" src="../assets/delete.png"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>
+                            <h4>Yes</h4>
+                        </td>
+                        <td><img style="height: 30px;width: 35px;" src="../assets/delete.png"></td>
+                        <td>
+                            <h4>Yes</h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td><img style="height: 30px;width: 35px;" src="../assets/delete.png"></td>
+                        <td>
+                            <h4>Yes</h4>
+                        </td>
+                        <td>
+                            <h4>Yes</h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td><img style="height: 30px;width: 35px;" src="../assets/delete.png"></td>
+                        <td><img style="height: 30px;width: 35px;" src="../assets/delete.png"></td>
+                        <td>
+                            <h4>Yes</h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">6</th>
+                        <td>
+                            <h4>Yes</h4>
+                        </td>
+                        <td>
+                            <h4>Yes</h4>
+                        </td>
+                        <td>
+                            <h4>Yes</h4>
+                        </td>
+                    </tr>
+    
+                </tbody>
+            </table>
+        </div>
+        <br><br>
+        <button type="button" class="btn btn-danger"
+            style="width: 500px;height: 60px;margin-right: 300px;background-color: rgb(99, 99, 212);border-color: rgb(99, 99, 212);">
+            <span>
+                <h3>subscription</h3>
+            </span> </button>
+    </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
