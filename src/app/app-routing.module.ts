@@ -1,3 +1,4 @@
+import { CompanyRegistrationComponent } from './company-registration/company-registration.component';
 import { PrivacyComponent } from './privacy/privacy.component';
 import { LicenceComponent } from './licence/licence.component';
 import { TermsComponent } from './terms/terms.component';
@@ -17,7 +18,7 @@ const routes: Routes = [{ path: 'login', component: LoginComponent
 },{ path: 'regist', component: ClientRegisterComponent
 },{ path: 'forgot', component: ForgotPasswordComponent
 },{ path: 'returntologin', component: LoginComponent
-},{ path: 'getstarted', component: LoginComponent
+},{ path: 'getstarted', component: CompanyRegistrationComponent
 },{ path: 'settings', component: SideNavComponent
 },{ path: 'profile', component: ProfileComponent
 },{ path: 'subscription', component: SubscriptionComponent

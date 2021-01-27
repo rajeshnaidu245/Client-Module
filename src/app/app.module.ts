@@ -25,6 +25,7 @@ import { FaqComponent } from './faq/faq.component';
 import { TermsComponent } from './terms/terms.component';
 import { LicenceComponent } from './licence/licence.component';
 import { PrivacyComponent } from './privacy/privacy.component';
+import { CompanyRegistrationComponent } from './company-registration/company-registration.component';
 
 
 
@@ -57,6 +58,8 @@ import { PrivacyComponent } from './privacy/privacy.component';
     LicenceComponent,
     
     PrivacyComponent,
+    
+    CompanyRegistrationComponent,
     
     
     
